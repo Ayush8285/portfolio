@@ -1,0 +1,193 @@
+.home__content{
+    display: grid;
+    grid-template-columns: 116px repeat(2, 1fr);
+    padding-top: 5.5rem;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+.home__social {
+    display: grid;
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+}
+
+.home__social-icon {
+    font-size: 1.5rem;
+    color: hsl(var(--hue), var(--sat), 20%)
+}
+
+.bird:hover {
+    color: #1DA1F2;
+}
+.ig:hover {
+    color: #E1306C;
+}
+
+.home__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.26rem;
+}
+
+.home__subtitle{
+    position: relative;
+    font-size: 1.25rem;
+    padding-left: 5.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.home__subtitle::before{
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: hsl(var(--hue), var(--sat), 46%);
+    left: 0;
+    top: 1rem;
+}
+
+.home__description{
+    max-width: 400px;
+    margin-bottom: 3rem
+}
+
+.box1 {
+    margin-top: 0;
+    margin-bottom: 26px;
+}
+
+.box2 {
+    clear: left;
+    margin : 0px 0px 0px 0px
+}
+
+
+.home__img {
+    background: url(../../assets/pic1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 9px rgb(225 255 255 / 30%);
+    order: 1;
+    justify-self: center;
+    width: 300px;
+    height: 300px;
+    animation: profileAnimation 8s ease-in-out infinite 1s;
+}
+
+@keyframes profileAnimation {
+     0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+     }
+
+     50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+     }
+
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+     }
+}
+
+/* .banner{
+    position: relative;
+}
+.banner #dotsCanvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+} */
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .home__content {
+        grid-template-columns: 100px repeat(2, 1fr);
+        column-gap: 1.25rem;
+    }
+     .home__subtitle {
+        padding-left: 3.75rem;
+        margin-bottom: 1rem;
+     }
+
+     .home__subtitle::before {
+        width: 43px;
+        top: 0.8rem;
+     }
+
+     .home__description{
+        max-width: initial;
+        margin-bottom: 2.5rem;
+     } 
+
+      .home__img {
+        width: 250px;
+        height: 250px;
+        box-shadow: inset 0 0 0 8px rgb(225 255 255 / 30%);
+     } 
+
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+    .home__content {
+        grid-template-columns: 0.5fr 3fr;
+        padding-top: 3.5rem;
+    }
+
+   .home__img {
+    order: initial;
+    justify-self: initial;
+    }
+
+    .home__data {
+        grid-column: 1/3;
+    }
+
+    .home__title{
+        margin: 0px 0px 15px 87px;
+    }
+
+    .home__img{
+        box-shadow: inset 0 0 0 6px rgb(225 255 255 / 30%);
+        width: 200px;
+        height: 200px;
+        margin: -34px 0px 32px 62px;
+    }
+
+    .box2 {
+        clear: right;
+        margin:  0px 0px 0px 60px
+    }
+
+    .box1 {
+        margin-top: 0rem
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .box2 {
+        clear: left;
+        margin:  0; 
+    }
+}
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+    .home__img {
+        width: 180px;
+        height: 180px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .box2 {
+        clear: left;
+        margin:  0px 0px 0px 0px;
+    }
+
+  }
+  
